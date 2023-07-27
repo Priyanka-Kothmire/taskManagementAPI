@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "36f1db98-553e-491e-9278-b02f5065b25a",
+		"name": "API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17891456"
+	},
+	"item": [
+		{
+			"name": "user_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\":\"priyanka@gmail.com\",\"password\":\"priyanka@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user_signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user_signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "text"
+					},
+					{
+						"key": "value",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGMyNGU2ZjUyYjI4OGJlMWFhMGYwNzIiLCJpYXQiOjE2OTA0NTU2NjN9.NvhD4GTArnxHqwAHf4TgkoMInd08XkDvOJxA04RnVms",
+						"type": "text"
+					},
+					{
+						"key": "type",
+						"value": "text",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\":\"priyanka@gmail.com\",\"password\":\"priyanka@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user_login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "text"
+					},
+					{
+						"key": "value",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGMyNGU2ZjUyYjI4OGJlMWFhMGYwNzIiLCJpYXQiOjE2OTA0NTU2NjN9.NvhD4GTArnxHqwAHf4TgkoMInd08XkDvOJxA04RnVms",
+						"type": "text"
+					},
+					{
+						"key": "type",
+						"value": "text",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"taskName\": \"Social Media API\",\r\n\t\"description\": \"Post CRUD Operations: Implement endpoints for users to Create (POST), Read (GET),Update (PUT), and Delete (DELETE) social media posts\",\r\n\t\"status\": \"incomplete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/addNewTask",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addNewTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AlltaskList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/AlltaskList",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"AlltaskList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/deleteTask/64c24fb752b288be1aa0f077",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteTask",
+						"64c24fb752b288be1aa0f077"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findTaskByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/findTaskByStatus?status=incomplete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"findTaskByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "incomplete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"taskName\":\"Social Media API\",    \"description\":\"Post CRUD Operations: Implement endpoints for users to Create (POST), Read (GET),Update (PUT), and Delete (DELETE) social media posts\",   \"status\":\"in-progress\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/updateTask/64c250e7a77b31d65acea01e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateTask",
+						"64c250e7a77b31d65acea01e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
